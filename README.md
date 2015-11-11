@@ -3,15 +3,15 @@ Simple video mixer patch for Pure Data & Gem allowing interaction from audio sou
 Mainly made for [Birtawil](https://soundcloud.com/birtawil) live performances.
 Experimental and not actively maintained.
 
-# Requirements
+## Requirements
 - pd-extended
 
-# Features
+## Features
 - Mix 2 video files
 - Alterate gain, treshold and other parameters via audio input
 - Fullscreen video
 
-# TODO
+## TODO
 - Make a seperate and clean gui
 - Add controls for routing audio interaction on video
 - Add webcam video source
