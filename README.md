@@ -1,5 +1,5 @@
 # PdVideoMixer
-Simple video mixer patch for Pure Data allowing interaction from audio sources.
+Simple video mixer patch for Pure Data & Gem allowing interaction from audio sources.
 Mainly made for [Birtawil](https://soundcloud.com/birtawil) live performances.
 Experimental and not actively maintained.
 
