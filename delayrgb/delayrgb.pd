@@ -1,0 +1,192 @@
+#N canvas 2 83 948 659 10;
+#X obj 191 27 alpha;
+#X obj 218 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 37 245 alpha 1;
+#X floatatom 88 276 5 0 0 0 - - -;
+#X obj 76 220 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 296 198 colorRGB 0 1 0;
+#X obj 37 200 colorRGB 1 0 0;
+#X obj 296 243 alpha 1;
+#X obj 296 297 pix_delay;
+#X floatatom 347 274 5 0 0 0 - - -;
+#X obj 335 217 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 37 298 pix_delay;
+#X obj 169 245 alpha 1;
+#X floatatom 220 278 5 0 0 0 - - -;
+#X obj 208 219 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 169 300 pix_delay;
+#X obj 169 199 colorRGB 0 0 1;
+#X obj 209 176 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 1 1
+;
+#X obj 356 174 tgl 15 0 empty empty empty 17 7 0 10 -4160 -1 -1 1 1
+;
+#X obj 57 180 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 1
+1;
+#X obj 77 180 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
+;
+#X obj 97 180 tgl 15 0 empty empty empty 17 7 0 10 -4160 -1 -1 0 1
+;
+#X obj 189 176 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
+1;
+#X obj 229 176 tgl 15 0 empty empty empty 17 7 0 10 -4160 -1 -1 0 1
+;
+#X obj 316 174 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
+1;
+#X obj 336 174 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
+;
+#X obj 191 -16 inlet;
+#X obj 37 323 outlet;
+#X obj 296 322 outlet;
+#X obj 169 324 outlet;
+#X obj 209 67 loadbang;
+#X msg 209 88 1;
+#X msg 242 88 0;
+#X obj 433 -4 inlet;
+#X obj 433 317 outlet;
+#X obj 362 26 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 329 52 spigot;
+#X obj 433 62 spigot;
+#X obj 378 4 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 391 26 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 466 41 - 1;
+#X text 362 -14 bypass;
+#X text 60 387 inlet 1) wet rgb layers;
+#X text 60 414 inlet 2) dry layer for bypass;
+#X text 316 375 outlet 1) first layer;
+#X text 316 393 outlet 2) second layer;
+#X text 316 414 outlet 3) third layer;
+#X text 316 432 outlet 4) dry layer;
+#X obj 373 -30 loadbang;
+#X text 561 259 [pix_delay] makes the things interesting. Adding layers
+with no delay would be a bit boring \, each number box controls the
+layer delay in frames. The effect of delayrgb comes to life with these
+objects.;
+#X text 564 75 Now on to my abstraction: delayrgb It's pretty simple
+and i'm sure it can be higly tweaked There are three [colorRGB] one
+for each "layer". By default I made it to start the first one with
+RED the second with GREEN and the third with BLUE. It's simple \, so
+it's just a RGB delay. But playing with the toggles can make other
+shadows appear like RED + BLUE = PURPLE. That's up to the user. Also
+\, more "layers" could be added \, but i think it may eat too much
+resources \, three is fine for me. Feel free to add any layers your
+machine can handle.;
+#X obj 577 361 knob 24 24 0 1 0 0 empty auxr1 RED 0 -8 0 8 -258113
+-258113 -258113 2300 1;
+#X obj 609 361 knob 24 24 0 1 0 0 empty auxg1 GREEN 0 -8 0 8 -4034
+-4034 -4034 0 1;
+#X obj 642 361 knob 24 24 0 1 0 0 empty auxb1 BLUE 0 -8 0 8 -4160 -4160
+-4160 0 1;
+#X obj 576 410 knob 24 24 0 1 0 0 empty auxr2 RED 0 -8 0 8 -258113
+-258113 -258113 0 1;
+#X obj 608 411 knob 24 24 0 1 0 0 empty auxg2 GREEN 0 -8 0 8 -4034
+-4034 -4034 2300 1;
+#X obj 641 411 knob 24 24 0 1 0 0 empty auxb2 BLUE 0 -8 0 8 -4160 -4160
+-4160 0 1;
+#X obj 576 458 knob 24 24 0 1 0 0 empty auxr3 RED 0 -8 0 8 -258113
+-258113 -258113 0 1;
+#X obj 608 458 knob 24 24 0 1 0 0 empty auxg3 GREEN 0 -8 0 8 -4034
+-4034 -4034 0 1;
+#X obj 641 458 knob 24 24 0 1 0 0 empty auxb3 BLUE 0 -8 0 8 -4160 -4160
+-4160 2300 1;
+#X text 747 327 D E L A Y S;
+#X text 712 560 If you use same delays you'll lose the effect;
+#X obj 759 354 nbx 5 14 0 100 0 0 empty auxd1 LAYER1 0 -8 0 10 -257985
+-1 -1 3 256;
+#X obj 759 404 nbx 5 14 0 100 0 0 empty auxd2 LAYER2 0 -8 0 10 -257985
+-1 -1 5 256;
+#X obj 758 449 nbx 5 14 0 100 0 0 empty auxd3 LAYER3 0 -8 0 10 -257985
+-1 -1 8 256;
+#X text 667 363 LAYER1;
+#X text 665 412 LAYER2;
+#X text 666 460 LAYER3;
+#X text 564 497 Some tweaks are needed when playing with all the knobs
+\, it loses the balance. I don't find it annoying though;
+#X obj 826 458 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
+1;
+#X text 841 456 bypass;
+#X text 1086 170 Default preset;
+#X obj 1026 101 loadbang;
+#X obj 1026 120 delay 50;
+#X msg 1027 139 \; auxr1 1 \; auxg2 1 \; auxb3 1 \; auxd1 3 \; auxd2
+5 \; auxd3 8 \; auxr2 0 \; auxr3 0 \; auxg1 0 \; auxg3 0 \; auxb1 0
+\; auxb2 0 \;;
+#X obj 826 480 bng 15 250 50 0 empty empty empty 17 7 0 10 -260097
+-1 -1;
+#X text 844 477 default;
+#X connect 0 0 36 0;
+#X connect 1 0 0 1;
+#X connect 2 0 11 0;
+#X connect 3 0 11 1;
+#X connect 4 0 2 1;
+#X connect 5 0 7 0;
+#X connect 6 0 2 0;
+#X connect 7 0 8 0;
+#X connect 8 0 28 0;
+#X connect 9 0 8 1;
+#X connect 10 0 7 1;
+#X connect 11 0 27 0;
+#X connect 12 0 15 0;
+#X connect 13 0 15 1;
+#X connect 14 0 12 1;
+#X connect 15 0 29 0;
+#X connect 16 0 12 0;
+#X connect 17 0 16 2;
+#X connect 18 0 5 3;
+#X connect 19 0 6 1;
+#X connect 20 0 6 2;
+#X connect 21 0 6 3;
+#X connect 22 0 16 1;
+#X connect 23 0 16 3;
+#X connect 24 0 5 1;
+#X connect 25 0 5 2;
+#X connect 26 0 0 0;
+#X connect 30 0 31 0;
+#X connect 30 0 32 0;
+#X connect 31 0 19 0;
+#X connect 31 0 17 0;
+#X connect 31 0 18 0;
+#X connect 31 0 4 0;
+#X connect 31 0 14 0;
+#X connect 31 0 10 0;
+#X connect 31 0 1 0;
+#X connect 32 0 20 0;
+#X connect 32 0 21 0;
+#X connect 32 0 22 0;
+#X connect 32 0 23 0;
+#X connect 32 0 24 0;
+#X connect 32 0 25 0;
+#X connect 33 0 37 0;
+#X connect 35 0 36 1;
+#X connect 36 0 6 0;
+#X connect 36 0 16 0;
+#X connect 36 0 5 0;
+#X connect 37 0 34 0;
+#X connect 38 0 39 0;
+#X connect 38 0 35 0;
+#X connect 39 0 40 0;
+#X connect 40 0 37 1;
+#X connect 48 0 38 0;
+#X connect 51 0 6 1;
+#X connect 52 0 6 2;
+#X connect 53 0 6 3;
+#X connect 54 0 16 1;
+#X connect 55 0 16 2;
+#X connect 56 0 16 3;
+#X connect 57 0 5 1;
+#X connect 58 0 5 2;
+#X connect 59 0 5 3;
+#X connect 62 0 3 0;
+#X connect 63 0 13 0;
+#X connect 64 0 9 0;
+#X connect 69 0 38 0;
+#X connect 72 0 73 0;
+#X connect 73 0 74 0;
+#X connect 75 0 74 0;
+#X coords 200 -1 400 20 320 180 1 570 320;

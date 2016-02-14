@@ -1,4 +1,4 @@
-#N canvas 13 107 871 498 10;
+#N canvas 46 154 871 498 10;
 #X obj 523 109 gemwin;
 #X msg 534 87 0 \, destroy;
 #X obj 24 43 gemhead;
@@ -7,7 +7,7 @@
 #X obj 24 129 pix_film;
 #X msg 73 67 open \$1;
 #X obj 73 43 openpanel;
-#X obj 73 15 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 73 14 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 46 151 unpack f f f;
 #X floatatom 46 175 5 0 0 0 - - -;
@@ -23,7 +23,7 @@
 #X obj 139 65 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 214 45 gemhead;
-#X obj 214 19 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 214 19 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 214 131 pix_film;
 #X msg 263 69 open \$1;
@@ -35,7 +35,7 @@
 #X floatatom 278 176 5 0 0 0 - - -;
 #X floatatom 320 177 5 0 0 0 - - -;
 #X msg 325 45 auto \$1;
-#X obj 325 20 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 325 20 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 326 90 metro 100;
 #X obj 326 110 random 30675;
@@ -44,9 +44,9 @@
 #X obj 25 343 pix_mix 0;
 #X msg 523 49 dimen 320 240 \, create \, 1;
 #X obj 201 260 knob 32 32 0 1 0 0 empty empty Mix 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 1400 1;
 #X msg 525 159 \; pd dsp \$1;
-#X obj 525 134 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 525 134 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 410 63 adc~;
 #X obj 410 94 env~;
@@ -60,9 +60,9 @@
 #X obj 25 363 pix_gain;
 #X obj 25 384 pix_threshold;
 #X obj 247 261 knob 32 32 0 1 0 0 empty empty Gain 0 -8 0 8 -262144
--1 -1 953 1;
+-1 -1 3100 1;
 #X obj 290 261 knob 32 32 0 1 0 0 empty empty Threshold 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 500 1;
 #X msg 138 128 0;
 #X text 46 -3 Open video 1;
 #X text 238 -2 Open video 1;
@@ -71,17 +71,17 @@
 #X obj 112 389 bondo 3;
 #X obj 112 413 pack f f f;
 #X obj 371 264 knob 32 32 0 2 0 0 empty empty R 0 -8 0 8 -262144 -1
--1 0 1;
+-1 3100 1;
 #X obj 411 264 knob 32 32 0 2 0 0 empty empty G 0 -8 0 8 -262144 -1
--1 0 1;
+-1 3100 1;
 #X obj 450 264 knob 32 32 0 2 0 0 empty empty B 0 -8 0 8 -262144 -1
--1 0 1;
+-1 3100 1;
 #X obj 511 264 knob 32 32 0 1 0 0 empty empty R 0 -8 0 8 -262144 -1
--1 0 1;
+-1 700 1;
 #X obj 552 264 knob 32 32 0 1 0 0 empty empty G 0 -8 0 8 -262144 -1
--1 0 1;
+-1 600 1;
 #X obj 591 264 knob 32 32 0 1 0 0 empty empty B 0 -8 0 8 -262144 -1
--1 0 1;
+-1 300 1;
 #X text 402 226 Gain;
 #X text 530 231 Treshhold;
 #X obj 356 150 line;
@@ -173,8 +173,6 @@
 #X connect 63 0 57 1;
 #X connect 64 0 57 2;
 #X connect 67 0 72 0;
-#X connect 68 0 43 3;
-#X connect 68 0 50 0;
 #X connect 69 0 70 0;
 #X connect 71 0 69 0;
 #X connect 72 0 74 0;
