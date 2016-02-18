@@ -1,4 +1,4 @@
-#N canvas 53 203 797 448 10;
+#N canvas 197 217 797 448 10;
 #X obj 340 77 gemhead;
 #X obj 340 163 pix_film;
 #X msg 389 101 open \$1;
@@ -19,7 +19,7 @@
 #X obj 389 55 r openfile;
 #X obj 463 51 r playfile;
 #X obj 157 51 tgl 30 0 playfile empty Play 35 15 0 15 -262144 -1 -1
-1 1;
+0 1;
 #X obj 47 125 tgl 30 0 randomizeplay empty Randomize 35 15 0 15 -262144
 -1 -1 0 1;
 #X obj 452 100 r randomizeplay;
@@ -28,12 +28,14 @@
 #X obj 47 87 tgl 30 0 loopplay empty Loop 35 15 0 15 -262144 -1 -1
 1 1;
 #X obj 198 122 knob 32 32 2000 50 0 0 randomizespeed empty Random-speed
--20 -8 0 8 -262144 -1 -1 800 1;
+-20 -8 0 8 -262144 -1 -1 0 1;
 #X floatatom 598 164 5 0 0 0 - - -;
 #X obj 598 138 r loopplay;
 #X obj 518 180 spigot;
 #X obj 340 5 loadbang;
 #X obj 562 100 r randomizespeed;
+#X obj 371 253 pack f f f;
+#X obj 371 285 outlet;
 #X connect 0 0 1 0;
 #X connect 1 0 19 0;
 #X connect 1 1 4 0;
@@ -44,6 +46,9 @@
 #X connect 4 1 6 0;
 #X connect 4 2 7 0;
 #X connect 5 0 20 1;
+#X connect 5 0 28 0;
+#X connect 6 0 28 1;
+#X connect 7 0 28 2;
 #X connect 8 0 1 0;
 #X connect 9 0 20 0;
 #X connect 10 0 1 1;
@@ -58,4 +63,5 @@
 #X connect 26 0 21 0;
 #X connect 26 0 12 0;
 #X connect 27 0 9 1;
+#X connect 28 0 29 0;
 #X coords 0 -1 1 1 250 150 2 20 20;
