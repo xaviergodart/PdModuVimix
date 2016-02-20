@@ -1,14 +1,13 @@
-#N canvas 537 211 697 461 10;
+#N canvas 19 132 697 461 10;
 #X obj 381 136 gemwin;
 #X msg 392 114 0 \, destroy;
-#X msg 381 76 dimen 320 240 \, create \, 1;
-#X obj 549 61 gemkeyboard;
-#X obj 550 99 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 549 3 gemkeyboard;
+#X obj 550 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X msg 280 58 fullscreen \$1;
-#X obj 610 80 key;
-#X obj 567 98 select 113;
-#X obj 549 80 select 38;
+#X obj 610 22 key;
+#X obj 567 40 select 113;
+#X obj 549 22 select 38;
 #X obj 25 25 cnv 15 190 140 empty empty Output-window 20 12 0 14 -233017
 -66577 0;
 #X obj 45 124 tgl 30 0 fullscreenwin empty Fullscreen 35 15 0 15 -262144
@@ -21,15 +20,16 @@
 #X obj 381 46 r createwin;
 #X obj 280 22 r fullscreenwin;
 #X obj 486 128 r destroywin;
+#X msg 381 77 dimen 320 240 \, create \, 1;
 #X connect 1 0 0 0;
-#X connect 2 0 0 0;
-#X connect 3 0 8 0;
-#X connect 4 0 1 0;
-#X connect 5 0 0 0;
-#X connect 6 0 7 0;
-#X connect 7 0 4 0;
-#X connect 8 0 4 0;
-#X connect 14 0 2 0;
-#X connect 15 0 5 0;
-#X connect 16 0 1 0;
+#X connect 2 0 7 0;
+#X connect 3 0 1 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 7 0 3 0;
+#X connect 13 0 16 0;
+#X connect 14 0 4 0;
+#X connect 15 0 1 0;
+#X connect 16 0 0 0;
 #X coords 0 -1 1 1 200 150 2 20 20;

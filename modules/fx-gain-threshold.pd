@@ -1,0 +1,49 @@
+#N canvas 1 61 655 300 10;
+#X obj 25 25 cnv 15 240 130 empty empty FX-Gain-Threshold 20 12 0 14
+-233017 -66577 0;
+#X obj 326 89 pix_gain;
+#X obj 326 128 pix_threshold;
+#X obj 326 35 inlet;
+#X obj 326 177 outlet;
+#X obj 465 51 bondo 3;
+#X obj 465 72 pack f f f;
+#X obj 468 235 bondo 3;
+#X obj 468 256 pack f f f;
+#X obj 107 64 knob 32 32 0 2 0 0 empty empty R 0 -8 0 8 -262144 -1
+-1 0 1;
+#X obj 147 64 knob 32 32 0 2 0 0 empty empty G 0 -8 0 8 -262144 -1
+-1 0 1;
+#X obj 186 64 knob 32 32 0 2 0 0 empty empty B 0 -8 0 8 -262144 -1
+-1 0 1;
+#X text 43 67 Gain;
+#X obj 106 109 knob 32 32 0 1 0 0 empty empty R 0 -8 0 8 -262144 -1
+-1 3100 1;
+#X obj 147 109 knob 32 32 0 1 0 0 empty empty G 0 -8 0 8 -262144 -1
+-1 3100 1;
+#X obj 186 109 knob 32 32 0 1 0 0 empty empty B 0 -8 0 8 -262144 -1
+-1 3100 1;
+#X text 30 113 Treshhold;
+#X obj 326 -19 loadbang;
+#X msg 326 5 1;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
+#X connect 5 0 6 0;
+#X connect 5 1 6 1;
+#X connect 5 2 6 2;
+#X connect 6 0 1 2;
+#X connect 7 0 8 0;
+#X connect 7 1 8 1;
+#X connect 7 2 8 2;
+#X connect 8 0 2 2;
+#X connect 9 0 5 0;
+#X connect 10 0 5 1;
+#X connect 11 0 5 2;
+#X connect 13 0 7 0;
+#X connect 14 0 7 1;
+#X connect 15 0 7 2;
+#X connect 17 0 18 0;
+#X connect 18 0 9 0;
+#X connect 18 0 10 0;
+#X connect 18 0 11 0;
+#X coords 0 -1 1 1 250 140 2 20 20;
