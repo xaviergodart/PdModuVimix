@@ -1,23 +1,27 @@
-# PdVideoMixer
-Simple video mixer patch for Pure Data & Gem allowing interaction from audio sources.
+# PdModuVimix
+Collection of Pure Data objects to simplify GEM usage for live video mixing performances. You can see it as a modular video mixer.
 Mainly made for [Birtawil](https://soundcloud.com/birtawil) live performances.
 Experimental and not actively maintained.
 
 ## Requirements
-- pd-extended
+ * pd-extended (https://puredata.info/downloads/pd-extended)
+
+## Installation
+ * Clone the repository
+ * Add *modules* directory into pd path (Edit > Preferences > New > Select *modules* dir)
+ * Add new objects into your patch
+ * Check videomixer.pd for example
 
 ## Features
-- Mix 2 video files
-- Alterate gain, treshold and other parameters via audio input
+- Multiple independant objects with clean gui
 - Fullscreen video
 
 ## TODO
-- Make a seperate and clean gui
-- Add controls for routing audio interaction on video
+- Add audio interaction module
 - Add webcam video source
-- Add the ability to choose multiple audio input
+- Add videosynths modules
 - Add the ability to choose over multiple audio frequency bands as triggers
-- Midi and/or OSC support (interaction with Iannix?)
+- Midi and/or OSC support
 
 
 
