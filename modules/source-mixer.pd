@@ -1,6 +1,6 @@
-#N canvas 11 237 494 300 10;
-#X obj 25 25 cnv 15 190 55 empty empty Mixer 20 12 0 14 -233017 -66577
-0;
+#N canvas 9 241 494 300 10;
+#X obj 25 25 cnv 15 190 55 empty empty Source-mixer 20 12 0 14 -233017
+-66577 0;
 #X obj 303 76 pix_mix;
 #X obj 303 34 inlet;
 #X obj 349 34 inlet;
