@@ -1,0 +1,40 @@
+#N canvas 457 183 801 432 10;
+#X obj 432 118 pix_aging;
+#X obj 432 154 outlet;
+#X obj 387 32 inlet;
+#X obj 25 25 cnv 15 240 130 empty empty FX-Aging 20 12 0 14 -233017
+-66577 0;
+#X msg 533 174 scratch \$1;
+#X msg 432 77 dust \$1;
+#X msg 486 76 pits \$1;
+#X msg 537 77 coloraging \$1;
+#X obj 432 46 r \$0-dust;
+#X obj 497 46 r \$0-pits;
+#X obj 568 46 r \$0-coloraging;
+#X obj 533 147 r \$0-scratch;
+#X obj 46 66 tgl 15 0 \$0-dust empty Dust 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 46 90 tgl 15 0 \$0-pits empty Pits 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 46 115 tgl 15 0 \$0-coloraging empty Color-aging 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 185 84 knob 32 32 0 20 0 0 \$0-scratch empty Scratches 0 -8
+0 8 -262144 -1 -1 0 1;
+#X obj 120 204 loadbang;
+#X floatatom 190 182 5 0 0 0 - - -;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 5 0;
+#X connect 9 0 6 0;
+#X connect 10 0 7 0;
+#X connect 11 0 4 0;
+#X connect 16 0 12 0;
+#X connect 16 0 13 0;
+#X connect 16 0 14 0;
+#X connect 16 0 17 0;
+#X connect 17 0 15 0;
+#X coords 0 -1 1 1 250 140 2 20 20;

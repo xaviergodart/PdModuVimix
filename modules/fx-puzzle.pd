@@ -1,0 +1,44 @@
+#N canvas 71 208 806 420 10;
+#X obj 25 25 cnv 15 240 130 empty empty FX-Puzzle 20 12 0 14 -233017
+-66577 0;
+#X obj 335 140 pix_puzzle;
+#X obj 462 116 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 513 98 metro 4000;
+#X obj 190 54 knob 32 32 1 8 0 0 \$0-puzzlesize empty Size 0 -8 0 8
+-262144 -1 -1 0 1;
+#X msg 337 102 size \$1 \$2;
+#X floatatom 306 40 5 0 0 0 - - -;
+#X floatatom 392 38 5 0 0 0 - - -;
+#X obj 333 66 pack;
+#X obj 342 0 r \$0-puzzlesize;
+#X obj 47 59 bng 25 250 50 0 \$0-puzzleactivate empty Puzzle 30 12
+0 10 -262144 -1 -1;
+#X obj 456 3 r \$0-puzzleactivate;
+#X obj 286 117 inlet;
+#X obj 290 173 outlet;
+#X obj 99 210 loadbang;
+#X floatatom 190 181 5 0 0 0 - - -;
+#X obj 48 113 tgl 25 0 \$0-puzzlemetro empty Metro-puzzle 30 12 0 10
+-262144 -1 -1 0 1;
+#X obj 494 50 r \$0-puzzlemetro;
+#X obj 190 108 knob 32 32 100 10000 0 0 \$0-puzzlemetrospeed empty
+Metro-speed 0 -8 0 8 -262144 -1 -1 0 1;
+#X obj 513 166 r \$0-puzzlemetrospeed;
+#X connect 1 0 13 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 5 0 1 0;
+#X connect 6 0 8 0;
+#X connect 7 0 8 1;
+#X connect 8 0 5 0;
+#X connect 9 0 6 0;
+#X connect 9 0 7 0;
+#X connect 11 0 2 0;
+#X connect 12 0 1 0;
+#X connect 14 0 10 0;
+#X connect 14 0 15 0;
+#X connect 15 0 4 0;
+#X connect 17 0 3 0;
+#X connect 19 0 3 1;
+#X coords 0 -1 1 1 250 140 2 20 20;

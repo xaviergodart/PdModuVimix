@@ -1,4 +1,4 @@
-#N canvas 19 132 697 461 10;
+#N canvas 474 159 697 461 10;
 #X obj 381 136 gemwin;
 #X msg 392 114 0 \, destroy;
 #X obj 549 3 gemkeyboard;
@@ -21,6 +21,9 @@
 #X obj 280 22 r fullscreenwin;
 #X obj 486 128 r destroywin;
 #X msg 381 77 dimen 320 240 \, create \, 1;
+#X obj 287 217 pix_texture;
+#X obj 287 248 rectangle 6 4;
+#X obj 287 182 inlet;
 #X connect 1 0 0 0;
 #X connect 2 0 7 0;
 #X connect 3 0 1 0;
@@ -32,4 +35,6 @@
 #X connect 14 0 4 0;
 #X connect 15 0 1 0;
 #X connect 16 0 0 0;
+#X connect 17 0 18 0;
+#X connect 19 0 17 0;
 #X coords 0 -1 1 1 200 150 2 20 20;
