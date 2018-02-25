@@ -4,7 +4,7 @@ Mainly made for [Birtawil](https://soundcloud.com/birtawil) live performances.
 Experimental and not actively maintained.
 
 ## Requirements
- * pd-extended (https://puredata.info/downloads/pd-extended)
+ * purr-data (https://github.com/agraef/purr-data/releases)
 
 ## Installation
  * Clone the repository
