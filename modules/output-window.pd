@@ -1,4 +1,4 @@
-#N canvas 474 159 697 461 10;
+#N canvas 859 235 697 484 10;
 #X obj 381 136 gemwin;
 #X msg 392 114 0 \, destroy;
 #X obj 549 3 gemkeyboard;

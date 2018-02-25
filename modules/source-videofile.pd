@@ -1,12 +1,12 @@
-#N canvas 256 214 797 448 10;
+#N canvas 256 268 797 448 10;
 #X obj 340 77 gemhead;
 #X obj 340 163 pix_film;
 #X msg 389 101 open \$1;
 #X obj 389 77 openpanel;
 #X obj 362 185 unpack f f f;
-#X floatatom 362 209 5 0 0 0 - - -;
-#X floatatom 404 209 5 0 0 0 - - -;
-#X floatatom 446 210 5 0 0 0 - - -;
+#X floatatom 362 209 5 0 0 0 - - -, f 5;
+#X floatatom 404 209 5 0 0 0 - - -, f 5;
+#X floatatom 446 210 5 0 0 0 - - -, f 5;
 #X msg 484 76 auto \$1;
 #X obj 452 122 metro 100;
 #X msg 518 146 0;
@@ -17,16 +17,14 @@
 #X obj 47 51 bng 30 250 50 0 \$0-openfile empty Open 35 15 0 15 -262144
 -1 -1;
 #X obj 157 51 tgl 30 0 \$0-playfile empty Play 35 15 0 15 -262144 -1
--1 0 1;
+-1 1 1;
 #X obj 47 125 tgl 30 0 \$0-randomizeplay empty Randomize 35 15 0 15
--262144 -1 -1 0 1;
+-262144 -1 -1 1 1;
 #X obj 300 236 outlet;
 #X obj 452 142 random;
 #X obj 47 87 tgl 30 0 \$0-loopplay empty Loop 35 15 0 15 -262144 -1
 -1 1 1;
-#X obj 198 122 knob 32 32 2000 50 0 0 \$0-randomizespeed empty Random-speed
--20 -8 0 8 -262144 -1 -1 2385 1;
-#X floatatom 598 164 5 0 0 0 - - -;
+#X floatatom 598 164 5 0 0 0 - - -, f 5;
 #X obj 518 180 spigot;
 #X obj 340 5 loadbang;
 #X obj 371 253 pack f f f;
@@ -37,34 +35,36 @@
 #X obj 598 138 r \$0-loopplay;
 #X obj 452 100 r \$0-randomizeplay;
 #X msg 283 80 500;
+#X obj 198 122 moonlib/mknob 32 32 20000 50 0 0 \$0-randomizespeed
+empty Random-speed -20 -8 0 8 -262144 -1 -1 0 1;
 #X connect 0 0 1 0;
 #X connect 1 0 16 0;
 #X connect 1 1 4 0;
-#X connect 1 2 21 0;
+#X connect 1 2 20 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
 #X connect 4 0 5 0;
 #X connect 4 1 6 0;
 #X connect 4 2 7 0;
 #X connect 5 0 17 1;
-#X connect 5 0 23 0;
-#X connect 6 0 23 1;
-#X connect 7 0 23 2;
+#X connect 5 0 22 0;
+#X connect 6 0 22 1;
+#X connect 7 0 22 2;
 #X connect 8 0 1 0;
 #X connect 9 0 17 0;
 #X connect 10 0 1 1;
 #X connect 12 0 0 0;
 #X connect 17 0 1 1;
-#X connect 20 0 21 1;
-#X connect 21 0 10 0;
-#X connect 22 0 18 0;
-#X connect 22 0 12 0;
-#X connect 22 0 30 0;
-#X connect 23 0 24 0;
-#X connect 25 0 3 0;
-#X connect 26 0 8 0;
-#X connect 27 0 9 1;
-#X connect 28 0 20 0;
-#X connect 29 0 9 0;
-#X connect 30 0 19 0;
+#X connect 19 0 20 1;
+#X connect 20 0 10 0;
+#X connect 21 0 18 0;
+#X connect 21 0 12 0;
+#X connect 21 0 29 0;
+#X connect 22 0 23 0;
+#X connect 24 0 3 0;
+#X connect 25 0 8 0;
+#X connect 26 0 9 1;
+#X connect 27 0 19 0;
+#X connect 28 0 9 0;
+#X connect 29 0 30 0;
 #X coords 0 -1 1 1 250 150 2 20 20;

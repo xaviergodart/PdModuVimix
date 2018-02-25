@@ -1,4 +1,4 @@
-#N canvas 477 57 888 686 10;
+#N canvas 0 27 828 1002 10;
 #X obj 854 849 translateXYZ;
 #X obj 854 870 rotateXYZ;
 #X msg 941 859 0;

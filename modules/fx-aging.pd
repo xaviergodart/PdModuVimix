@@ -1,4 +1,4 @@
-#N canvas 457 183 801 432 10;
+#N canvas 457 210 801 432 10;
 #X obj 432 118 pix_aging;
 #X obj 432 154 outlet;
 #X obj 387 32 inlet;
@@ -18,10 +18,10 @@
 1;
 #X obj 46 115 tgl 15 0 \$0-coloraging empty Color-aging 17 7 0 10 -262144
 -1 -1 0 1;
-#X obj 185 84 knob 32 32 0 20 0 0 \$0-scratch empty Scratches 0 -8
-0 8 -262144 -1 -1 0 1;
 #X obj 120 204 loadbang;
-#X floatatom 190 182 5 0 0 0 - - -;
+#X floatatom 190 182 5 0 0 0 - - -, f 5;
+#X obj 185 84 moonlib/mknob 32 32 0 20 0 0 \$0-scratch empty Scratches
+0 -8 0 8 -262144 -1 -1 0 1;
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
 #X connect 4 0 0 0;
@@ -32,9 +32,9 @@
 #X connect 9 0 6 0;
 #X connect 10 0 7 0;
 #X connect 11 0 4 0;
-#X connect 16 0 12 0;
-#X connect 16 0 13 0;
-#X connect 16 0 14 0;
+#X connect 15 0 12 0;
+#X connect 15 0 13 0;
+#X connect 15 0 14 0;
+#X connect 15 0 16 0;
 #X connect 16 0 17 0;
-#X connect 17 0 15 0;
 #X coords 0 -1 1 1 250 140 2 20 20;

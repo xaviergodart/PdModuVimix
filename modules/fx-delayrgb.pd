@@ -1,21 +1,21 @@
-#N canvas 1 57 1351 686 10;
+#N canvas 195 139 1351 686 10;
 #X obj 191 27 alpha;
 #X obj 218 5 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 37 245 alpha 1;
-#X floatatom 88 276 5 0 0 0 - - -;
+#X floatatom 88 276 5 0 0 0 - - -, f 5;
 #X obj 76 220 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 296 198 colorRGB 0 1 0;
 #X obj 37 200 colorRGB 1 0 0;
 #X obj 296 243 alpha 1;
 #X obj 296 297 pix_delay;
-#X floatatom 347 274 5 0 0 0 - - -;
+#X floatatom 347 274 5 0 0 0 - - -, f 5;
 #X obj 335 217 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 37 298 pix_delay;
 #X obj 169 245 alpha 1;
-#X floatatom 220 278 5 0 0 0 - - -;
+#X floatatom 220 278 5 0 0 0 - - -, f 5;
 #X obj 208 219 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 169 300 pix_delay;
@@ -87,39 +87,39 @@ machine can handle.;
 \; auxb2 0 \;;
 #X obj 575 325 cnv 15 280 170 empty empty FX-RGB-Triple-Delay 20 12
 0 14 -233017 -66577 0;
-#X obj 597 364 knob 24 24 0 1 0 0 empty auxr1 R 0 -8 0 8 -1 -1 -1 2300
-1;
-#X obj 629 364 knob 24 24 0 1 0 0 empty auxg1 G 0 -8 0 8 -1 -1 -1 0
-1;
-#X obj 662 364 knob 24 24 0 1 0 0 empty auxb1 B 0 -8 0 8 -1 -1 -1 0
-1;
-#X obj 596 413 knob 24 24 0 1 0 0 empty auxr2 R 0 -8 0 8 -1 -1 -1 0
-1;
-#X obj 628 414 knob 24 24 0 1 0 0 empty auxg2 G 0 -8 0 8 -1 -1 -1 2300
-1;
-#X obj 661 414 knob 24 24 0 1 0 0 empty auxb2 B 0 -8 0 8 -1 -1 -1 0
-1;
-#X obj 596 461 knob 24 24 0 1 0 0 empty auxr3 R 0 -8 0 8 -1 -1 -1 0
-1;
-#X obj 628 461 knob 24 24 0 1 0 0 empty auxg3 G 0 -8 0 8 -1 -1 -1 0
-1;
-#X obj 661 461 knob 24 24 0 1 0 0 empty auxb3 B 0 -8 0 8 -1 -1 -1 2300
-1;
 #X text 694 366 Delay 1;
 #X text 695 416 Delay 2;
 #X text 695 464 Delay 3;
-#X obj 752 364 knob 24 24 0 100 0 0 empty auxd1 Time 0 -8 0 8 -262144
--1 -1 69 1;
-#X obj 753 414 knob 24 24 0 100 0 0 empty auxd2 Time 0 -8 0 8 -262144
--1 -1 115 1;
-#X obj 753 461 knob 24 24 0 100 0 0 empty auxd3 Time 0 -8 0 8 -262144
--1 -1 184 1;
 #X obj 794 389 tgl 15 0 empty empty bypass 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 794 411 bng 15 250 50 0 empty empty default 17 7 0 10 -262144
 -1 -1;
 #X text 561 -21 Based on Lucas Leal RGB Delay https://www.youtube.com/watch?v=vHpbdepxl-E)
 ;
+#X obj 597 364 moonlib/mknob 24 24 0 1 0 0 empty auxr1 R 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 629 364 moonlib/mknob 24 24 0 1 0 0 empty auxg1 G 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 662 364 moonlib/mknob 24 24 0 1 0 0 empty auxb1 B 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 752 364 moonlib/mknob 24 24 0 100 0 0 empty auxd1 Time 0 -8
+0 8 -262144 -1 -1 0 1;
+#X obj 596 413 moonlib/mknob 24 24 0 1 0 0 empty auxr2 R 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 628 414 moonlib/mknob 24 24 0 1 0 0 empty auxg2 G 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 661 414 moonlib/mknob 24 24 0 1 0 0 empty auxb2 B 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 753 414 moonlib/mknob 24 24 0 100 0 0 empty auxd2 Time 0 -8
+0 8 -262144 -1 -1 0 1;
+#X obj 596 461 moonlib/mknob 24 24 0 1 0 0 empty auxr3 R 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 628 461 moonlib/mknob 24 24 0 1 0 0 empty auxg3 G 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 661 461 moonlib/mknob 24 24 0 1 0 0 empty auxb3 B 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 753 461 moonlib/mknob 24 24 0 100 0 0 empty auxd3 Time 0 -8
+0 8 -262144 -1 -1 0 1;
 #X connect 0 0 35 0;
 #X connect 1 0 0 1;
 #X connect 2 0 11 0;
@@ -175,18 +175,18 @@ machine can handle.;
 #X connect 47 0 37 0;
 #X connect 53 0 54 0;
 #X connect 54 0 55 0;
-#X connect 57 0 6 1;
-#X connect 58 0 6 2;
-#X connect 59 0 6 3;
-#X connect 60 0 16 1;
-#X connect 61 0 16 2;
-#X connect 62 0 16 3;
-#X connect 63 0 5 1;
-#X connect 64 0 5 2;
-#X connect 65 0 5 3;
-#X connect 69 0 3 0;
+#X connect 60 0 37 0;
+#X connect 61 0 55 0;
+#X connect 63 0 6 1;
+#X connect 64 0 6 2;
+#X connect 65 0 6 3;
+#X connect 66 0 3 0;
+#X connect 67 0 16 1;
+#X connect 68 0 16 2;
+#X connect 69 0 16 3;
 #X connect 70 0 13 0;
-#X connect 71 0 9 0;
-#X connect 72 0 37 0;
-#X connect 73 0 55 0;
+#X connect 71 0 5 1;
+#X connect 72 0 5 2;
+#X connect 73 0 5 3;
+#X connect 74 0 9 0;
 #X coords 200 -1 400 20 290 180 2 570 320;
