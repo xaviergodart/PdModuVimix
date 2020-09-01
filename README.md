@@ -1,6 +1,6 @@
 # PdModuVimix
 Collection of Pure Data objects to simplify GEM usage for live video mixing performances. You can see it as a modular video mixer.
-Mainly made for [Birtawil](https://soundcloud.com/birtawil) live performances.
+Mainly made for [Birtawil](https://birtawil.bandcamp.com/) live performances.
 Experimental and not actively maintained.
 
 ## Requirements
